@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/stock
+    username: root
+    password: qpalzm0915
+    hikari:
+      maximum-pool-size: 40
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    username: default
+    password: khb0915
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
